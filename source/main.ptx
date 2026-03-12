@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <document-id>authorslastnamelowercase-ShortTitleCamelCase</document-id>
+
+    <macros>
+      \newcommand{\clthree}{Cl_{3,0,0}}
+      \newcommand{\vvec}{\mathbf{v}}
+      \newcommand{\uvec}{\mathbf{u}}
+      \newcommand{\wvec}{\mathbf{w}}
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\Z}{\mathbb{Z}}
+      \newcommand{\C}{\mathbb{C}}
+
+    </macros>
+    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+  </docinfo>
+
+  <article xml:id="shorttitlelowercase">
+
+    <title>An Exploration into Geometric Algebra</title>
+
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Micah Dykhuis</personname>
+        </author>
+      </titlepage>
+    </frontmatter>
+
+    <xi:include href="./full.ptx" />
+
+  </article>
+
+</pretext>

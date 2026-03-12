@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section>
+  <bibinfo>
+    <author>
+      <personname>Micah Dykhuis</personname>
+    </author>
+  </bibinfo>
+    <title>Introduction</title>
+    <p>
+      Geometric Algebra is the study of the Geometric and Physical applications of Clifford Algebras. In fact,
+      the term Geometric Algebra was originally suggested by William Clifford, the founder of Clifford Algebra. <xref ref="GEOBook"/>
+      For the remainder of this paper, the terms Geometric Algebra and Clifford Algebra will be
+      used interchangeably. Additionally, we will only be talking about finite dimensional Geometric Algebras, 
+      as infinite dimensional Geometric Algebras lack a few nice properties, such as having a well defined duality and 
+      nice pseudovectors. These properties will be further explained later.
+    </p>
+    <p>
+      Geometric Algebra is a powerful mathematical tool for intuitively modelling many useful systems and tools, 
+      especially in physics. Because of its simplicity and penchant for intuition, Geometric Algebra 
+      is popular among Physicists, however I believe that the theory behind it is just as beautiful.
+    </p>
+    <p>
+      We will begin by discussing what useful features someone might look for in an algebra. 
+      Then, we will define a Geometric Algebra, and show some of its basic operations. We will generate a basis for a Geometric Algebra. 
+      Next, we will discuss reflections in Geometric Algebra and how to compute them. Finally, we will 
+      explore Rotors, a powerfully simple tool for rotations in any Geometric Algebra. 
+      We will also overview some other interesting topics of Geometric Algebra for further research.
+    </p>
+  <subsection>
+  <title>Why Geometric Algebra?</title>
+  <p>
+    If you were building a new Algebra from scratch, what would you want to include? There are many useful properties
+    for an algebra to have. Being a ring with identity is useful. Being compatible with many transcendental functions 
+    is also a very nice bonus. Being easy to compute would be good. Geometric Algebra has all of these properties, but the main three qualities that I would like to highlight are:
+  </p>
+  <subsubsection>
+    <title>Vector Space</title>
+    <p>
+      An Algebra forming a vector space is one of the most useful properties an Algebra can have. 
+      When the dimension of this vector space is finite, it allows us to form a finite basis for any element in the algebra. 
+      Furthermore, this allows us to define orthogonality in this algebra. In fact, the concept of orthogonality 
+      is crucial to the construction of these Geometric Algebras.
+    </p>
+  </subsubsection>
+  <subsubsection>
+  <title>Algebra Between Elements of Different Dimensions</title>
+  <p>
+    Can you multiply a matrix and a vector? Sometimes, if they are of the right dimension. Can you subtract a vector from a matrix? 
+    Under most vector spaces, that is nonsense. In Geometric Algebra, you can take two objects of different dimensions (in this case, grade, which we will discuss later on) and multiply them together to get something meaningful.
+  </p>
+</subsubsection>
+<subsubsection>
+<title>Geometric Intuition</title>
+<p>
+Plenty of Algebras have an intuitive Geometric meaning, and Geometric Algebra is no exception. To rotate a complex 
+number by 90 degrees, one can simply multiply it by the imaginary number <m>i</m>. Geometric Algebra has something similar, 
+though arguably more powerful, called a rotor. If we would like to rotate any multivector <m>\mathbf{v}</m> by any number of degrees 
+along any axis, we can simply take the sandwhich product of it and the corresponding rotor <m>R</m>. That is, the rotated multivector 
+<m>\mathbf{v}'</m> can be represented as <m>\mathbf{v}'=R\mathbf{v}R^{\dagger}</m>. The idea of a Rotor acting on 
+a vector via the sandwhich product is the primary topic that we will be building to.
+</p>
+</subsubsection>
+</subsection>
+
+<section>
+  <title>Building a Geometric Algebra</title>
+  <p>
+    Let us now build our first Geometric Algebra! The notation of a Geometric Algebra is 
+    <m>Cl_{n,m,k}</m>, such that there are <m>n</m> basis vectors that square to <m>1</m>, <m>m</m> 
+    basis vectors that square to <m>-1</m>, and <m>k</m> basis vectors that square to <m>0</m>. We will 
+    discuss what squaring means in this context shortly.
+  </p>
+
+  <p>
+    We will focus on <m>\clthree</m>, as it is not as trivial as
+    <m>Cl_{2,0,0}</m>, and is a good representation of the 3-dimensional world. Being a representation 
+    of the 3-dimensional world, we will begin by defining <m>i,j,k\in\clthree</m> as being the orthogonal 
+    basis vectors of this Geometric Algebra. You can think of <m>i</m> as analagous to the first basis 
+    vector of <m>\R^n</m>, with <m>j,k</m> being the second and third, respectively. If I wanted to 
+    represent the vector <m>v=\begin{bmatrix}3\amp-2\amp1\end{bmatrix}^T</m> in <m>\clthree</m>, we would write 
+    <m>v</m> as <m>v=3i-2j+k</m>. But what does it mean for two basis vectors to be orthogonal 
+    in a Geometric Algebra? For that, we need to discuss the Geometric Product.
+  </p>
+  <subsection>
+    <title>The Geometric Product</title>
+    <p>
+      The Geometric Product can be defined over the basis vectors in two ways. In general, the Geometric product satisfies two properties:
+    </p>
+    <p>
+      <em>Orthonormal Squaring</em>: Any basis vector squared with itself is equal to a scalar. This 
+      scalar can be 1, -1, or 0, depending on the Geometric Algebra and specific vector. In <m>\clthree</m>, 
+      all three vectors square to 1.
+    </p>
+    <p>
+      <em>Anticommutivity</em>: Any two orthogonal vectors anticommute. For example, the Geometric Product, 
+      <m>ij</m> is equal to <m>-ji</m>. Please note that if two vectors are parallel, then they commute.
+    </p>
+    <p>
+     A far more intuitive way to conceptualize the Geometric Product on any vectors is through the inner and outer product. We will define 
+     the geometric product between two vectors, <m>\vvec,\uvec\in \clthree</m> as,
+     <md>
+      \vvec\uvec=\vvec\cdot \uvec+\vvec\wedge \uvec,
+     </md>
+     such that <m>\cdot</m> is the inner product and <m>\wedge</m> is the outer product. The inner product is trivial, as it is simply the magnitude of 
+     both of the vectors multiplied together with the cosine of the angle between them. In a sense, it is a measure of how orthogonal two vectors are. 
+     
+     The outer product is less simple. The <em>magnitude</em> of the outer product is simply the magnitude of the two vectors multiplied by the sine of 
+     the angle between them. In a sense, the <em>magnitude</em> of the outer product is a measure of how parallel two vectors are. However, it is far more than just that measure.
+    </p>
+    <p>
+      For any two vectors, their outer product is the area formed by the parallelogram with the two 
+      vectors as legs (as seen in <xref ref="Outer-Product"/>). This means that the outer product of a vector and itself is simply 0. 
+      The area has three main characteristics. The first being the 
+      magnitude of the area. The second being the handedness of the area. This is often represented by 
+      a directed circle within it, or algebraically as a positive or negative sign. Finally, the area 
+      is also defined by its orientation. An area that is translated to a different location on a plane 
+      is equal to the original area, but an area shifted to a different plane is not equal to its original 
+      area. Notice that the shape of these areas don't actually matter, as they are not defined by that 
+      characteristic.
+      We call these special oriented areas <em>bi-vectors</em>.
+    </p>
+<figure xml:id="Outer-Product">
+  <caption>On the right are two non-parralel vectors in <m>\mathbb{R}^2</m>, while on the right 
+  is the bi-vector generated by their outer product.</caption>
+  <sidebyside widths="45% 45%">
+<figure xml:id="R2-Vectors">
+      <caption>Vectors in <m>\mathbb{R}^2</m></caption>
+      <image source="CL2Vectors.png">
+      </image>
+</figure>
+    <figure xml:id="R2Bi-Vector">
+      <caption>Oriented Area / bi-vector</caption>
+      <image source="CL2OrientedArea.png">
+      </image>
+    </figure>
+  </sidebyside>
+</figure>
+
+<p>
+  The outer product of three non-parallel vectors in <m>\R^n</m> such that <m>n\ge3</m> 
+  would then be an oriented volume, also known as a tri-vector. This can be generalized to any arbitrary dimension, up to the dimension of 
+  the original vector space. We call these general <m>n</m>-vectors <em>blades</em>. A vector would be a 
+  1-blade, a bi-vector a 2-blade, and so on and so forth. By some abuse of notation, we can even call a 
+  scalar a 0-blade. It is far easier to represent <m>n</m>-blades as the outer product of <m>n</m>
+  orthogonal basis vectors. We would simply write the blade formed by the outer product of basis vectors <m>i,j</m> 
+  as <m>i\wedge j</m>. The number of basis vectors required to form a blade by the outer product is called the <em>grade</em> of the blade.
+</p>
+
+<p>
+  With our new definitions of inner and outer products, let us find a Geometric Product. in <m>\clthree</m>, 
+  we will define <m>\mathbf{v}=2i+3j</m>, and <m>\mathbf{u}=4j-2k</m>. We will now find,
+  <md>
+    \vvec\uvec=\vvec\cdot\uvec+\vvec\wedge\uvec.
+  </md>
+  It is trivial to find the inner product by the standard definition given in linear algebra. Thus, 
+  <m>\vvec\cdot\uvec=12</m>. The outer product is nearly as simple. The outer product distributes over addition, 
+  so we can simply distribute the components of <m>\vvec</m> over <m>\uvec</m>. Keeping in mind that the 
+  outer product of any vector with itself is 0, we can see that <m>\vvec\wedge\uvec=8i\wedge j -4i \wedge k -6j \wedge k</m>.
+  This is a single quantity, but much like our vectors, it is far easier to represent it as a linear combination of blades. In this case,
+  instead of being represented by 1-blades (vectors), it is represented by 2-blades (bi-vectors). Adding these two quantities together, we obtain,
+  <md>
+    \vvec\uvec=12+(8i\wedge j -4i \wedge k -6j \wedge k).
+  </md>
+  Strangely, we have added a scalar with a bi-vector. How can that make any sense? Similar to adding real and imaginary numbers, we can simply write them 
+  as added with an addition sign and call it a single value. Representing the output of the Geometric Product as a single value, with components of different 
+  blades, is extremely useful. We call elements that are the sum of multiple different blades a <m>multi-vector</m>, and they are the most general element of a 
+  geometric algebra.
+</p>
+
+<p>
+  Please note that the Geometric Product is only equal to the sum of the dot product and outer product 
+  when between two vectors. The Geometric Product between any two general multi-vectors is <em>not</em> the sum of the 
+  dot product and outer product. Thankfully, we can break down any blade, and hence any multi-vector, 
+  into the geometric product of orthogonal basis vectors, so in practice this is not a problem.
+</p>
+
+<p>
+  Another interesting fact is that the geometric product of any two orthogonal vectors is simply their outer product. Therefore, it is common 
+  practice to write blades as the geometric product of orthogonal basis vectors. For example, in <m>\clthree</m>, the bi-vector representing a positively oriented area of 1 on 
+  the <m>i,j</m> plane can be represented as <m>B=i\wedge j=ij</m>.
+</p>
+  </subsection>
+<subsection>
+    <title>The Basis and Dimension of a Geometric Algebra</title>
+    <p>
+      Now that we have established the geometric product and its components, we can look at the algebra as a whole. We now come to a new question: if we start with <m>n</m> orthogonal basis vectors in our underlying vector space, how many independent basis elements are in the resulting Geometric Algebra?
+    </p>
+
+    <p>
+      Because we can form new elements by taking the outer product of our basis vectors (forming bivectors, trivectors, etc.), the total dimension of the algebra are determined as binomial coefficients. For an <m>n</m>-dimensional vector space, there is <m>\binom{n}{0}</m> scalar, <m>\binom{n}{1}</m> basis vectors, <m>\binom{n}{2}</m> basis bivectors, all the way up to <m>\binom{n}{n}</m> <m>n</m>-blades. Summing these binomial coefficients gives us a total dimension of <m>2^n</m>.
+    </p>
+    <p>
+      Let us apply this to the Geometric Algebra representing 3D Euclidean space, <m>Cl_{3,0,0}</m>. Since <m>n=3</m>, the Geometric Algebra is a vector space of dimension <m>2^3 = 8</m>. We can then list the basis blades of <m>\clthree</m> by their grade:
+      <ul>
+        <li><strong>Grade 0 (Scalar):</strong> <m>1</m> </li>
+        <li><strong>Grade 1 (Vectors):</strong> <m>i, j, k</m> </li>
+        <li><strong>Grade 2 (Bivectors):</strong> <m>ij, jk, ki</m> </li>
+        <li><strong>Grade 3 (Trivector):</strong> <m>ijk</m> </li>
+      </ul>
+
+<figure xml:id="Basis1">
+  <sidebyside widths="45% 45%">
+    <figure xml:id="Origin">
+      <caption>0-Blade, The Origin.</caption>
+      <image source="Origin.png"/>
+    </figure>
+
+    <figure xml:id="Vectors">
+      <caption>3 1-Blades, Vectors.</caption>
+      <image source="vectors.png"/>
+    </figure>
+  </sidebyside>
+</figure>
+
+<figure xml:id="Basis2">
+  <caption>All 8 basis elements of <m>\clthree</m>. The arrows and helix in the 2-blades and 3-blades 
+  represent positive orientation.</caption>
+
+  <sidebyside widths="45% 45%">
+    <figure xml:id="bivectors">
+      <caption>3 2-Blades, Oriented Areas.</caption>
+      <image source="bivectors.png"/>
+    </figure>
+
+    <figure xml:id="trivector">
+      <caption>3-Blade, Oriented Volume.</caption>
+      <image source="trivector.png"/>
+    </figure>
+  </sidebyside>
+</figure>
+      Any general multivector in <m>Cl_{3,0,0}</m> is simply a linear combination of these 8 basis elements.
+    </p>
+    <p>
+      The highest-grade blade in any Geometric Algebra is special and is called the <em>Pseudoscalar</em>, usually denoted by <m>I</m>. In <m>Cl_{3,0,0}</m>, the pseudoscalar is the oriented volume <m>I = ijk</m>. The pseudoscalar has many interesting properties. One of which is, that if you calculate the geometric product of <m>I</m> with itself, you obtain: <m>I^2 = -1</m>. In <m>\clthree</m>, this makes <m>I</m> act very similarly to the imaginary number! Another useful property of pseudoscalars is that, multiplying any multivector by <m>I</m> finds its orthogonal complement. In Geomatric Algebra, this concept is called <em>duality</em>.
+    </p>
+
+    <p>
+      The concept of duality is extremely useful in many fields, one of which beings physics. In physics, angular momentum and magnetic fields are often called "axial vectors" or "pseudovectors" because they act like vectors but do not perfectly mirror across planes. In Geometric Algebra, these quantities are actually bivectors! By multiplying a bivector <m>B</m> by the additive inverse of the pseudoscalar, we find its dual <m>\mathbf{v} = -IB</m>. Additionally, the standard cross product is just the dual of the outer product: <m>\mathbf{u} \times \mathbf{v} = -I(\mathbf{u} \wedge \mathbf{v})</m>. Geometric algebra removes the need for the right-hand rule and axial-vectors. Instead, it replaces them with bi-vectors that can be easily generalized.
+    </p>
+  </subsection>
+  <section>
+    <title>Reflections</title>
+    <p>
+      In traditional linear algebra, reflecting a vector across a plane usually requires the projection formula. In Geometric Algebra, however, the geometric product allows us to express reflections as a sandwhich product. 
+    </p>
+    
+    <p>
+      Let's assume that we have a vector <m>\mathbf{v}</m> that we would like to reflect across a plane (in dimensions <m>n\gt3</m>, we can use hyperplanes, which are higher dimensional planes). We can define this plane by its normal vector (it's dual, or orthogonal complement.): <m>\mathbf{n}</m>. To simplify the math, we can assume <m>\mathbf{n}</m> is a unit vector. This means that <m>\mathbf{n}\mathbf{n}=1</m>. In Geometric Algebra, the reflected vector <m>\mathbf{v}'</m> is given by the formula:
+      <md>
+        \mathbf{v}' = -\mathbf{n}\mathbf{v}\mathbf{n}.
+      </md>
+    </p>
+    <p>
+      Let's break down why this formula works. We can decompose our vector <m>\mathbf{v}</m> into two parts. These parts are a component parallel to the normal vector (<m>\mathbf{v}_{\parallel}</m>) and a component orthogonal to the normal vector (<m>\mathbf{v}_{\perp}</m>). Thus, <m>\mathbf{v} = \mathbf{v}_{\parallel} + \mathbf{v}_{\perp}</m>. 
+    </p>
+    <p>
+      Remember the rules for the geometric product: parallel vectors commute, so <m>\mathbf{n}\mathbf{v}_{\parallel} = \mathbf{v}_{\parallel}\mathbf{n}</m>. Conversely, orthogonal vectors anticommute, meaning <m>\mathbf{n}\mathbf{v}_{\perp} = -\mathbf{v}_{\perp}\mathbf{n}</m>. Using these rules, we can apply the reflection formula to the parallel and orthogonal components.
+      <md>
+        -\mathbf{n}\mathbf{v}_{\parallel}\mathbf{n} = -\mathbf{v}_{\parallel}\mathbf{n}\mathbf{n} = -\mathbf{v}_{\parallel}(\mathbf{n}^2) = -\mathbf{v}_{\parallel}
+      </md>
+      <md>
+        -\mathbf{n}\mathbf{v}_{\perp}\mathbf{n} = -(-\mathbf{v}_{\perp}\mathbf{n})\mathbf{n} = \mathbf{v}_{\perp}(\mathbf{n}^2) = \mathbf{v}_{\perp}
+      </md>
+    </p>
+    <p>
+      We can then add our seperate components back together, obtaining <m>\mathbf{v}' = -\mathbf{v}_{\parallel} + \mathbf{v}_{\perp}</m>. The component that is parallel to the normal vector is flipped, while the component orthogonal to the normal vector is unchanged. Thus, we have reflected <m>\vvec</m> across the plane, as seen in <xref ref="reflection"/>.
+      <figure xml:id="reflection">
+      <caption>A reflection of a vector (blue), across a plane (grey), to obtain a reflected vector, 
+        (purple). The black vector is the normal of the plane. The green and red vectors are the components of the blue vector 
+        orthogonal and parralel to the normal vector, respectively. The maroon vector is the negative of the parralel component.
+      </caption>
+      <image source="Reflection.png" width='50%'/>
+    </figure> 
+    </p>
+    <p>
+      Although reflections are very useful in Geometric Algebra, they are especially useful when combined with other reflections. A pertinent theorem to this is the Cartan-Dieudonné theorem, which states that any rotation can be constructed by combining reflections. If we reflect a vector twice across two different planes with normal vectors <m>\mathbf{n}_1</m> and <m>\mathbf{n}_2</m>, then the transformed vector <m>\vvec''</m> is in the form:
+      <md>
+        \mathbf{v}'' = -\mathbf{n}_2(-\mathbf{n}_1\mathbf{v}\mathbf{n}_1)\mathbf{n}_2 = (\mathbf{n}_2\mathbf{n}_1)\mathbf{v}(\mathbf{n}_1\mathbf{n}_2).
+      </md>
+    </p>
+    <p>
+      The resulting geometric product of the two normal vectors, <m>\mathbf{n}_2\mathbf{n}_1</m>, is called a <em>Rotor</em>.
+    </p>
+  </section>
+  <section>
+    <title>Rotors and Rotations</title>
+    <p>
+      Rotors are the easiest and most powerful way to represent rotations in Geometric Algebra. 
+    </p>
+    
+    <p>
+      We defined our rotor <m>R</m> as the geometric product of two normal vectors: <m>R = \mathbf{n}_2\mathbf{n}_1</m>. Because they are both vectors, we can expand this into inner and outer products:
+      <md>
+        R = \mathbf{n}_2\cdot\mathbf{n}_1 + \mathbf{n}_2\wedge\mathbf{n}_1.
+      </md>
+    </p>
+    <p>
+      Because <m>\mathbf{n}_1</m> and <m>\mathbf{n}_2</m> are unit vectors, their inner product <m>\mathbf{n}_2\cdot\mathbf{n}_1</m> is simply <m>\cos(\theta)</m>, where <m>\theta</m> is the angle between them. The outer product <m>\mathbf{n}_2\wedge\mathbf{n}_1</m> forms a bivector representing the plane of rotation. Let us define <m>B</m> as the unit bivector representing this plane. Then <m>\mathbf{n}_2\wedge\mathbf{n}_1 = -B\sin(\theta)</m>. Substituting these into the equation for the rotor equation gives the equation:
+      <md>
+        R = \cos(\theta) - B\sin(\theta).
+      </md>
+    </p>
+    <p>
+      Interestingly, this is equation is a generalization of Euler's formula, <m>e^{i\theta} = \cos(\theta) + i\sin(\theta)</m>. Because the unit bivector <m>B</m> squares to <m>-1</m> (similar to the imaginary number <m>i</m>), we can represent the rotor as the exponential: <m>R = e^{-B\theta}</m>. Although <m>B</m> is similar to the imaginary unit <m>i</m>, it is far more powerful, as it can be used to represent a rotation in any plane in any dimension.
+    </p>
+    <p>
+      When we apply the sandwich product <m>\mathbf{v}'' = R\mathbf{v}R^{\dagger}</m>, the vector is reflected <em>twice</em>. This means the total angle of rotation is <m>2\theta</m>. In order to rotate a vector by angle <m>\alpha</m>, we construct a rotor with an angle of <m>\alpha/2</m>. Thus, the rotor <m>R</m> that rotates any multivector by an angle <m>\alpha</m> in a plane represented by <m>B</m> is:
+      <md>
+        R = e^{-B\alpha/2}.
+      </md>
+      The reverse rotor, <m>R^{\dagger}</m>, has the opposite angle: <m>R^{\dagger} = e^{B\alpha/2}</m>. 
+    </p>
+    
+    <p>
+      To rotate any vector <m>\mathbf{v}</m>, we use the sandwhich product:
+      <md>
+        \vvec ' = e^{-B\alpha/2} \mathbf{v} e^{B\alpha/2}.
+      </md>
+    </p>
+    <p>
+      This formula rotates any vector in not only 3 dimensional space, but a space of any dimension. Rotors are just as versatile as quaternions when it comes to rotations, but have a cleaner construction and can work in any basis.
+    </p>
+  </section>
+  <section>
+    <title>Further Explorations in Geometric Algebra</title>
+    <p>
+      Unfortunately, we were only able to focus on Clifford Algebras over standard Euclidean space <m>\clthree</m> and a few applications. There are far more interesting Geometric Algebras than this, and their applications go far beyond rotations. In fact, Geometric Algebra is a quickly growing field in both math and physics. Some useful topics that I would recommend exploring are:
+    </p>
+
+    <subsection>
+      <title>Spacetime Algebra (STA)</title>
+      <p>
+        We can add an additional basis vector that squares to <m>-1</m> to form<m>Cl_{3,1,0}</m>. This Geometric Algebra is a very useful representation of relativistic physics. This is known as Spacetime Algebra, which is able to combine the electric and magnetic fields into a single bivector field, denoted <m>F</m>. Using this, Maxwell's 4 equations can be condensed into the single equation <m>\nabla F = J</m>.
+      </p>
+      </subsection>
+
+    <subsection>
+      <title>Projective Geometric Algebra (PGA)</title>
+      <p>
+        From <m>\clthree</m>, we can add a basis vector that squares to zero <m>Cl_{3,0,1}</m>. This is 3D Projective Geometric Algebra. PGA treats translations and rotations very similarly, which is useful for computer graphics and kinematics. PGA introduces motors (motion rotors) that can perform rigid body transformations with a single geometric product.
+      </p>
+      </subsection>
+
+    <subsection>
+      <title>Geometric Calculus</title>
+      <p>
+        Geometric Calculus extends Geometric Algebra to derivatives and integrals. It introduces the vector derivative, <m>\nabla</m>, which can work with multivectors. This combines the gradient, divergence, and curl into a single operator. Geometric Calculus also generalizes Stokes' Theorem, that also combines Green's theorem and the  fundamental theorem of calculus.
+      </p>
+      </subsection>
+  </section>
+</section>
+
+<section>
+  <references>
+    <title>Bibliography</title>
+    <!-- Website/Manual Example -->
+    <biblio type="raw" xml:id="JadczykNotes">
+      Arkadiusz Jadczyk. <pubtitle>Notes on Clifford Algebras</pubtitle>. 2019. 
+      Available at <url href="https://arkadiusz-jadczyk.eu/docs/clifford.pdf" visual="arkadiusz-jadczyk.eu/docs/clifford.pdf"/>.
+    </biblio>
+
+    <biblio type="raw" xml:id="RenaudNotes">
+      Pierre Renaud. <pubtitle>CLIFFORD ALGEBRAS LECTURE NOTES ON APPLICATIONS IN PHYSICS</pubtitle>. 2020. 
+      Available at <url href="https://hal.science/hal-03015551/document" visual="hal.science/hal-03015551/document"/>.
+    </biblio>
+
+    <!-- Book Example -->
+    <biblio type="raw" xml:id="GEOBook">
+      David Hestenes and Garret Sobczyk. <pubtitle>Clifford Algebra to Geometric Calculus</pubtitle>. 
+      D. Reidel Publishing Company, Dordrecht, 1984.
+    </biblio>
+        <biblio type="raw" xml:id="SwiftIntro">
+      sudgylacmoe. <pubtitle>A Swift Introduction to Geometric Algebra</pubtitle>. YouTube video. 
+      Available at <url href="https://www.youtube.com/watch?v=60z_hpEAtD8" visual="youtube.com/watch?v=60z_hpEAtD8"/>.
+    </biblio>
+  </references>
+</section>
+</section>
+
+
