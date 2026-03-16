@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.18';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="authorslastnamelowercase-ShortTitleCamelCase" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="shorttitlelowercase.html"><span class="title">An Exploration into Geometric Algebra</span></a></h1>
+<p class="byline">Micah Dykhuis</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="shorttitlelowercase-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="shorttitlelowercase.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\clthree}{Cl_{3,0,0}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\uvec}{\mathbf{u}}
+\newcommand{\wvec}{\mathbf{w}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="shorttitlelowercase-3.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-6" class="internal"><span class="codenumber">1.1</span> <span class="title">Why Geometric Algebra?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-6-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Vector Space</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-6-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Algebra Between Elements of Different Dimensions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-6-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Geometric Intuition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7" class="internal"><span class="codenumber">1.1</span> <span class="title">Building a Geometric Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-4" class="internal"><span class="codenumber">1.1.1</span> <span class="title">The Geometric Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-5" class="internal"><span class="codenumber">1.1.2</span> <span class="title">The Basis and Dimension of a Geometric Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-6" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Reflections</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-7" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Rotors and Rotations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-8" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Further Explorations in Geometric Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-8-3" class="internal"><span class="title">Spacetime Algebra (STA)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-8-4" class="internal"><span class="title">Projective Geometric Algebra (PGA)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-7-8-5" class="internal"><span class="title">Geometric Calculus</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-8" class="internal"><span class="codenumber">1.2</span> <span class="title"></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="shorttitlelowercase-3.html#shorttitlelowercase-3-8-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Bibliography</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="shorttitlelowercase-3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction</span>
+</h2>
+<div class="para" id="shorttitlelowercase-3-3">Geometric Algebra is the study of the Geometric and Physical applications of Clifford Algebras. In fact, the term Geometric Algebra was originally suggested by William Clifford, the founder of Clifford Algebra. <a href="shorttitlelowercase-3.html#GEOBook" class="xref" data-knowl="./knowl/xref/GEOBook.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 1.2.3">[1.2.3]</a> For the remainder of this paper, the terms Geometric Algebra and Clifford Algebra will be used interchangeably. Additionally, we will only be talking about finite dimensional Geometric Algebras, as infinite dimensional Geometric Algebras lack a few nice properties, such as having a well defined duality and nice pseudovectors. These properties will be further explained later.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-4">Geometric Algebra is a powerful mathematical tool for intuitively modelling many useful systems and tools, especially in physics. Because of its simplicity and penchant for intuition, Geometric Algebra is popular among Physicists, however I believe that the theory behind it is just as beautiful.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-5">We will begin by discussing what useful features someone might look for in an algebra. Then, we will define a Geometric Algebra, and show some of its basic operations. We will generate a basis for a Geometric Algebra. Next, we will discuss reflections in Geometric Algebra and how to compute them. Finally, we will explore Rotors, a powerfully simple tool for rotations in any Geometric Algebra. We will also overview some other interesting topics of Geometric Algebra for further research.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="shorttitlelowercase-3-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why Geometric Algebra?</span>
+</h3>
+<div class="para" id="shorttitlelowercase-3-6-2">If you were building a new Algebra from scratch, what would you want to include? There are many useful properties for an algebra to have. Being a ring with identity is useful. Being compatible with many transcendental functions is also a very nice bonus. Being easy to compute would be good. Geometric Algebra has all of these properties, but the main three qualities that I would like to highlight are:<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="shorttitlelowercase-3-6-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector Space</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-6-3-2">An Algebra forming a vector space is one of the most useful properties an Algebra can have. When the dimension of this vector space is finite, it allows us to form a finite basis for any element in the algebra. Furthermore, this allows us to define orthogonality in this algebra. In fact, the concept of orthogonality is crucial to the construction of these Geometric Algebras.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.1.1: Vector Space"><a href="#shorttitlelowercase-3-6-3" title="Copy heading and permalink for Subsubsection 1.1.1: Vector Space" aria-label="Copy heading and permalink for Subsubsection 1.1.1: Vector Space">🔗</a></div></section><section class="subsubsection" id="shorttitlelowercase-3-6-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Algebra Between Elements of Different Dimensions</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-6-4-2">Can you multiply a matrix and a vector? Sometimes, if they are of the right dimension. Can you subtract a vector from a matrix? Under most vector spaces, that is nonsense. In Geometric Algebra, you can take two objects of different dimensions (in this case, grade, which we will discuss later on) and multiply them together to get something meaningful.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-6-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.1.2: Algebra Between Elements of Different Dimensions"><a href="#shorttitlelowercase-3-6-4" title="Copy heading and permalink for Subsubsection 1.1.2: Algebra Between Elements of Different Dimensions" aria-label="Copy heading and permalink for Subsubsection 1.1.2: Algebra Between Elements of Different Dimensions">🔗</a></div></section><section class="subsubsection" id="shorttitlelowercase-3-6-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric Intuition</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-6-5-2">Plenty of Algebras have an intuitive Geometric meaning, and Geometric Algebra is no exception. To rotate a complex number by 90 degrees, one can simply multiply it by the imaginary number <span class="process-math">\(i\text{.}\)</span> Geometric Algebra has something similar, though arguably more powerful, called a rotor. If we would like to rotate any multivector <span class="process-math">\(\mathbf{v}\)</span> by any number of degrees along any axis, we can simply take the sandwhich product of it and the corresponding rotor <span class="process-math">\(R\text{.}\)</span> That is, the rotated multivector <span class="process-math">\(\mathbf{v}'\)</span> can be represented as <span class="process-math">\(\mathbf{v}'=R\mathbf{v}R^{\dagger}\text{.}\)</span> The idea of a Rotor acting on a vector via the sandwhich product is the primary topic that we will be building to.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-6-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.1.3: Geometric Intuition"><a href="#shorttitlelowercase-3-6-5" title="Copy heading and permalink for Subsubsection 1.1.3: Geometric Intuition" aria-label="Copy heading and permalink for Subsubsection 1.1.3: Geometric Intuition">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.1: Why Geometric Algebra?"><a href="#shorttitlelowercase-3-6" title="Copy heading and permalink for Subsection 1.1: Why Geometric Algebra?" aria-label="Copy heading and permalink for Subsection 1.1: Why Geometric Algebra?">🔗</a></div></section><section class="section" id="shorttitlelowercase-3-7"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Building a Geometric Algebra</span>
+</h3>
+<div class="para" id="shorttitlelowercase-3-7-2">Let us now build our first Geometric Algebra! The notation of a Geometric Algebra is <span class="process-math">\(Cl_{n,m,k}\text{,}\)</span> such that there are <span class="process-math">\(n\)</span> basis vectors that square to <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(m\)</span> basis vectors that square to <span class="process-math">\(-1\text{,}\)</span> and <span class="process-math">\(k\)</span> basis vectors that square to <span class="process-math">\(0\text{.}\)</span> We will discuss what squaring means in this context shortly.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-3">We will focus on <span class="process-math">\(\clthree\text{,}\)</span> as it is not as trivial as <span class="process-math">\(Cl_{2,0,0}\text{,}\)</span> and is a good representation of the 3-dimensional world. Being a representation of the 3-dimensional world, we will begin by defining <span class="process-math">\(i,j,k\in\clthree\)</span> as being the orthogonal basis vectors of this Geometric Algebra. You can think of <span class="process-math">\(i\)</span> as analagous to the first basis vector of <span class="process-math">\(\R^n\text{,}\)</span> with <span class="process-math">\(j,k\)</span> being the second and third, respectively. If I wanted to represent the vector <span class="process-math">\(v=\begin{bmatrix}3\amp-2\amp1\end{bmatrix}^T\)</span> in <span class="process-math">\(\clthree\text{,}\)</span> we would write <span class="process-math">\(v\)</span> as <span class="process-math">\(v=3i-2j+k\text{.}\)</span> But what does it mean for two basis vectors to be orthogonal in a Geometric Algebra? For that, we need to discuss the Geometric Product.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="shorttitlelowercase-3-7-4"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Geometric Product</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-7-4-2">The Geometric Product can be defined over the basis vectors in two ways. In general, the Geometric product satisfies two properties:<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-4-3">
+<em class="emphasis">Orthonormal Squaring</em>: Any basis vector squared with itself is equal to a scalar. This scalar can be 1, -1, or 0, depending on the Geometric Algebra and specific vector. In <span class="process-math">\(\clthree\text{,}\)</span> all three vectors square to 1.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-4-4">
+<em class="emphasis">Anticommutivity</em>: Any two orthogonal vectors anticommute. For example, the Geometric Product, <span class="process-math">\(ij\)</span> is equal to <span class="process-math">\(-ji\text{.}\)</span> Please note that if two vectors are parallel, then they commute.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-4-5">
+<div class="para">A far more intuitive way to conceptualize the Geometric Product on any vectors is through the inner and outer product. We will define the geometric product between two vectors, <span class="process-math">\(\vvec,\uvec\in \clthree\)</span> as,</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-4-5-2">
+\begin{equation*}
+\vvec\uvec=\vvec\cdot \uvec+\vvec\wedge \uvec,
+\end{equation*}
+</div>
+<div class="para">such that <span class="process-math">\(\cdot\)</span> is the inner product and <span class="process-math">\(\wedge\)</span> is the outer product. The inner product is trivial, as it is simply the magnitude of both of the vectors multiplied together with the cosine of the angle between them. In a sense, it is a measure of how orthogonal two vectors are. The outer product is less simple. The <em class="emphasis">magnitude</em> of the outer product is simply the magnitude of the two vectors multiplied by the sine of the angle between them. In a sense, the <em class="emphasis">magnitude</em> of the outer product is a measure of how parallel two vectors are. However, it is far more than just that measure.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-4-6">For any two vectors, their outer product is the area formed by the parallelogram with the two vectors as legs (as seen in <a href="shorttitlelowercase-3.html#Outer-Product" class="xref" data-knowl="./knowl/xref/Outer-Product.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1">Figure 1.1</a>). This means that the outer product of a vector and itself is simply 0. The area has three main characteristics. The first being the magnitude of the area. The second being the handedness of the area. This is often represented by a directed circle within it, or algebraically as a positive or negative sign. Finally, the area is also defined by its orientation. An area that is translated to a different location on a plane is equal to the original area, but an area shifted to a different plane is not equal to its original area. Notice that the shape of these areas don’t actually matter, as they are not defined by that characteristic. We call these special oriented areas <em class="emphasis">bi-vectors</em>.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Outer-Product"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="R2-Vectors"><div class="image-box"><img src="external/CL2Vectors.png" class="contained"></div>
+<figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Vectors in <span class="process-math">\(\mathbb{R}^2\)</span><div class="autopermalink" data-description="Figure 1.1.(a)"><a href="#R2-Vectors" title="Copy heading and permalink for Figure 1.1.(a)" aria-label="Copy heading and permalink for Figure 1.1.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="R2Bi-Vector"><div class="image-box"><img src="external/CL2OrientedArea.png" class="contained"></div>
+<figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Oriented Area / bi-vector<div class="autopermalink" data-description="Figure 1.1.(b)"><a href="#R2Bi-Vector" title="Copy heading and permalink for Figure 1.1.(b)" aria-label="Copy heading and permalink for Figure 1.1.(b)">🔗</a></div></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>On the right are two non-parralel vectors in <span class="process-math">\(\mathbb{R}^2\text{,}\)</span> while on the right is the bi-vector generated by their outer product.<div class="autopermalink" data-description="Figure 1.1"><a href="#Outer-Product" title="Copy heading and permalink for Figure 1.1" aria-label="Copy heading and permalink for Figure 1.1">🔗</a></div></figcaption></figure><div class="para" id="shorttitlelowercase-3-7-4-8">The outer product of three non-parallel vectors in <span class="process-math">\(\R^n\)</span> such that <span class="process-math">\(n\ge3\)</span> would then be an oriented volume, also known as a tri-vector. This can be generalized to any arbitrary dimension, up to the dimension of the original vector space. We call these general <span class="process-math">\(n\)</span>-vectors <em class="emphasis">blades</em>. A vector would be a 1-blade, a bi-vector a 2-blade, and so on and so forth. By some abuse of notation, we can even call a scalar a 0-blade. It is far easier to represent <span class="process-math">\(n\)</span>-blades as the outer product of <span class="process-math">\(n\)</span> orthogonal basis vectors. We would simply write the blade formed by the outer product of basis vectors <span class="process-math">\(i,j\)</span> as <span class="process-math">\(i\wedge j\text{.}\)</span> The number of basis vectors required to form a blade by the outer product is called the <em class="emphasis">grade</em> of the blade.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-4-9">
+<div class="para">With our new definitions of inner and outer products, let us find a Geometric Product. in <span class="process-math">\(\clthree\text{,}\)</span> we will define <span class="process-math">\(\mathbf{v}=2i+3j\text{,}\)</span> and <span class="process-math">\(\mathbf{u}=4j-2k\text{.}\)</span> We will now find,</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-4-9-4">
+\begin{equation*}
+\vvec\uvec=\vvec\cdot\uvec+\vvec\wedge\uvec.
+\end{equation*}
+</div>
+<div class="para">It is trivial to find the inner product by the standard definition given in linear algebra. Thus, <span class="process-math">\(\vvec\cdot\uvec=12\text{.}\)</span> The outer product is nearly as simple. The outer product distributes over addition, so we can simply distribute the components of <span class="process-math">\(\vvec\)</span> over <span class="process-math">\(\uvec\text{.}\)</span> Keeping in mind that the outer product of any vector with itself is 0, we can see that <span class="process-math">\(\vvec\wedge\uvec=8i\wedge j -4i \wedge k -6j \wedge k\text{.}\)</span> This is a single quantity, but much like our vectors, it is far easier to represent it as a linear combination of blades. In this case, instead of being represented by 1-blades (vectors), it is represented by 2-blades (bi-vectors). Adding these two quantities together, we obtain,</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-4-9-9">
+\begin{equation*}
+\vvec\uvec=12+(8i\wedge j -4i \wedge k -6j \wedge k).
+\end{equation*}
+</div>
+<div class="para">Strangely, we have added a scalar with a bi-vector. How can that make any sense? Similar to adding real and imaginary numbers, we can simply write them as added with an addition sign and call it a single value. Representing the output of the Geometric Product as a single value, with components of different blades, is extremely useful. We call elements that are the sum of multiple different blades a <span class="process-math">\(multi-vector\text{,}\)</span> and they are the most general element of a geometric algebra.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-4-10">Please note that the Geometric Product is only equal to the sum of the dot product and outer product when between two vectors. The Geometric Product between any two general multi-vectors is <em class="emphasis">not</em> the sum of the dot product and outer product. Thankfully, we can break down any blade, and hence any multi-vector, into the geometric product of orthogonal basis vectors, so in practice this is not a problem.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-4-11">Another interesting fact is that the geometric product of any two orthogonal vectors is simply their outer product. Therefore, it is common practice to write blades as the geometric product of orthogonal basis vectors. For example, in <span class="process-math">\(\clthree\text{,}\)</span> the bi-vector representing a positively oriented area of 1 on the <span class="process-math">\(i,j\)</span> plane can be represented as <span class="process-math">\(B=i\wedge j=ij\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.1: The Geometric Product"><a href="#shorttitlelowercase-3-7-4" title="Copy heading and permalink for Subsection 1.1.1: The Geometric Product" aria-label="Copy heading and permalink for Subsection 1.1.1: The Geometric Product">🔗</a></div></section><section class="subsection" id="shorttitlelowercase-3-7-5"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Basis and Dimension of a Geometric Algebra</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-7-5-2">Now that we have established the geometric product and its components, we can look at the algebra as a whole. We now come to a new question: if we start with <span class="process-math">\(n\)</span> orthogonal basis vectors in our underlying vector space, how many independent basis elements are in the resulting Geometric Algebra?<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-5-3">Because we can form new elements by taking the outer product of our basis vectors (forming bivectors, trivectors, etc.), the total dimension of the algebra are determined as binomial coefficients. For an <span class="process-math">\(n\)</span>-dimensional vector space, there is <span class="process-math">\(\binom{n}{0}\)</span> scalar, <span class="process-math">\(\binom{n}{1}\)</span> basis vectors, <span class="process-math">\(\binom{n}{2}\)</span> basis bivectors, all the way up to <span class="process-math">\(\binom{n}{n}\)</span> <span class="process-math">\(n\)</span>-blades. Summing these binomial coefficients gives us a total dimension of <span class="process-math">\(2^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-5-4">
+<div class="para">Let us apply this to the Geometric Algebra representing 3D Euclidean space, <span class="process-math">\(Cl_{3,0,0}\text{.}\)</span> Since <span class="process-math">\(n=3\text{,}\)</span> the Geometric Algebra is a vector space of dimension <span class="process-math">\(2^3 = 8\text{.}\)</span> We can then list the basis blades of <span class="process-math">\(\clthree\)</span> by their grade:</div>
+<ul class="disc" id="shorttitlelowercase-3-7-5-4-5">
+<li id="shorttitlelowercase-3-7-5-4-5-1">
+<div class="para" id="p-derived-shorttitlelowercase-3-7-5-4-5-1">Grade 0 (Scalar): <span class="process-math">\(1\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#shorttitlelowercase-3-7-5-4-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="shorttitlelowercase-3-7-5-4-5-2">
+<div class="para" id="p-derived-shorttitlelowercase-3-7-5-4-5-2">Grade 1 (Vectors): <span class="process-math">\(i, j, k\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#shorttitlelowercase-3-7-5-4-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="shorttitlelowercase-3-7-5-4-5-3">
+<div class="para" id="p-derived-shorttitlelowercase-3-7-5-4-5-3">Grade 2 (Bivectors): <span class="process-math">\(ij, jk, ki\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#shorttitlelowercase-3-7-5-4-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="shorttitlelowercase-3-7-5-4-5-4">
+<div class="para" id="p-derived-shorttitlelowercase-3-7-5-4-5-4">Grade 3 (Trivector): <span class="process-math">\(ijk\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#shorttitlelowercase-3-7-5-4-5-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">
+<figure class="figure figure-like" id="Basis1"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="Origin"><div class="image-box"><img src="external/Origin.png" class="contained"></div>
+<figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>0-Blade, The Origin.<div class="autopermalink" data-description="Figure 1.2.(a)"><a href="#Origin" title="Copy heading and permalink for Figure 1.2.(a)" aria-label="Copy heading and permalink for Figure 1.2.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="Vectors"><div class="image-box"><img src="external/vectors.png" class="contained"></div>
+<figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>3 1-Blades, Vectors.<div class="autopermalink" data-description="Figure 1.2.(b)"><a href="#Vectors" title="Copy heading and permalink for Figure 1.2.(b)" aria-label="Copy heading and permalink for Figure 1.2.(b)">🔗</a></div></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 1.2"><a href="#Basis1" title="Copy heading and permalink for Figure 1.2" aria-label="Copy heading and permalink for Figure 1.2">🔗</a></div></figcaption></figure> <figure class="figure figure-like" id="Basis2"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="bivectors"><div class="image-box"><img src="external/bivectors.png" class="contained"></div>
+<figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>3 2-Blades, Oriented Areas.<div class="autopermalink" data-description="Figure 1.3.(a)"><a href="#bivectors" title="Copy heading and permalink for Figure 1.3.(a)" aria-label="Copy heading and permalink for Figure 1.3.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="trivector"><div class="image-box"><img src="external/trivector.png" class="contained"></div>
+<figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>3-Blade, Oriented Volume.<div class="autopermalink" data-description="Figure 1.3.(b)"><a href="#trivector" title="Copy heading and permalink for Figure 1.3.(b)" aria-label="Copy heading and permalink for Figure 1.3.(b)">🔗</a></div></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>All 8 basis elements of <span class="process-math">\(\clthree\text{.}\)</span> The arrows and helix in the 2-blades and 3-blades represent positive orientation.<div class="autopermalink" data-description="Figure 1.3"><a href="#Basis2" title="Copy heading and permalink for Figure 1.3" aria-label="Copy heading and permalink for Figure 1.3">🔗</a></div></figcaption></figure> Any general multivector in <span class="process-math">\(Cl_{3,0,0}\)</span> is simply a linear combination of these 8 basis elements.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-5-5">The highest-grade blade in any Geometric Algebra is special and is called the <em class="emphasis">Pseudoscalar</em>, usually denoted by <span class="process-math">\(I\text{.}\)</span> In <span class="process-math">\(Cl_{3,0,0}\text{,}\)</span> the pseudoscalar is the oriented volume <span class="process-math">\(I = ijk\text{.}\)</span> The pseudoscalar has many interesting properties. One of which is, that if you calculate the geometric product of <span class="process-math">\(I\)</span> with itself, you obtain: <span class="process-math">\(I^2 = -1\text{.}\)</span> In <span class="process-math">\(\clthree\text{,}\)</span> this makes <span class="process-math">\(I\)</span> act very similarly to the imaginary number! Another useful property of pseudoscalars is that, multiplying any multivector by <span class="process-math">\(I\)</span> finds its orthogonal complement. In Geomatric Algebra, this concept is called <em class="emphasis">duality</em>.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-5-6">The concept of duality is extremely useful in many fields, one of which beings physics. In physics, angular momentum and magnetic fields are often called "axial vectors" or "pseudovectors" because they act like vectors but do not perfectly mirror across planes. In Geometric Algebra, these quantities are actually bivectors! By multiplying a bivector <span class="process-math">\(B\)</span> by the additive inverse of the pseudoscalar, we find its dual <span class="process-math">\(\mathbf{v} = -IB\text{.}\)</span> Additionally, the standard cross product is just the dual of the outer product: <span class="process-math">\(\mathbf{u} \times \mathbf{v} = -I(\mathbf{u} \wedge \mathbf{v})\text{.}\)</span> Geometric algebra removes the need for the right-hand rule and axial-vectors. Instead, it replaces them with bi-vectors that can be easily generalized.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.2: The Basis and Dimension of a Geometric Algebra"><a href="#shorttitlelowercase-3-7-5" title="Copy heading and permalink for Subsection 1.1.2: The Basis and Dimension of a Geometric Algebra" aria-label="Copy heading and permalink for Subsection 1.1.2: The Basis and Dimension of a Geometric Algebra">🔗</a></div></section><section class="section" id="shorttitlelowercase-3-7-6"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reflections</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-7-6-2">In traditional linear algebra, reflecting a vector across a plane usually requires the projection formula. In Geometric Algebra, however, the geometric product allows us to express reflections as a sandwhich product.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-6-3">
+<div class="para">Let’s assume that we have a vector <span class="process-math">\(\mathbf{v}\)</span> that we would like to reflect across a plane (in dimensions <span class="process-math">\(n\gt3\text{,}\)</span> we can use hyperplanes, which are higher dimensional planes). We can define this plane by its normal vector (it’s dual, or orthogonal complement.): <span class="process-math">\(\mathbf{n}\text{.}\)</span> To simplify the math, we can assume <span class="process-math">\(\mathbf{n}\)</span> is a unit vector. This means that <span class="process-math">\(\mathbf{n}\mathbf{n}=1\text{.}\)</span> In Geometric Algebra, the reflected vector <span class="process-math">\(\mathbf{v}'\)</span> is given by the formula:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-6-3-7">
+\begin{equation*}
+\mathbf{v}' = -\mathbf{n}\mathbf{v}\mathbf{n}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-6-4">Let’s break down why this formula works. We can decompose our vector <span class="process-math">\(\mathbf{v}\)</span> into two parts. These parts are a component parallel to the normal vector (<span class="process-math">\(\mathbf{v}_{\parallel}\)</span>) and a component orthogonal to the normal vector (<span class="process-math">\(\mathbf{v}_{\perp}\)</span>). Thus, <span class="process-math">\(\mathbf{v} = \mathbf{v}_{\parallel} + \mathbf{v}_{\perp}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-6-5">
+<div class="para">Remember the rules for the geometric product: parallel vectors commute, so <span class="process-math">\(\mathbf{n}\mathbf{v}_{\parallel} = \mathbf{v}_{\parallel}\mathbf{n}\text{.}\)</span> Conversely, orthogonal vectors anticommute, meaning <span class="process-math">\(\mathbf{n}\mathbf{v}_{\perp} = -\mathbf{v}_{\perp}\mathbf{n}\text{.}\)</span> Using these rules, we can apply the reflection formula to the parallel and orthogonal components.</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-6-5-3">
+\begin{equation*}
+-\mathbf{n}\mathbf{v}_{\parallel}\mathbf{n} = -\mathbf{v}_{\parallel}\mathbf{n}\mathbf{n} = -\mathbf{v}_{\parallel}(\mathbf{n}^2) = -\mathbf{v}_{\parallel}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-6-5-4">
+\begin{equation*}
+-\mathbf{n}\mathbf{v}_{\perp}\mathbf{n} = -(-\mathbf{v}_{\perp}\mathbf{n})\mathbf{n} = \mathbf{v}_{\perp}(\mathbf{n}^2) = \mathbf{v}_{\perp}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-6-6">We can then add our seperate components back together, obtaining <span class="process-math">\(\mathbf{v}' = -\mathbf{v}_{\parallel} + \mathbf{v}_{\perp}\text{.}\)</span> The component that is parallel to the normal vector is flipped, while the component orthogonal to the normal vector is unchanged. Thus, we have reflected <span class="process-math">\(\vvec\)</span> across the plane, as seen in <a href="shorttitlelowercase-3.html#reflection" class="xref" data-knowl="./knowl/xref/reflection.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1">Figure 1.1</a>. <figure class="figure figure-like" id="reflection"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Reflection.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A reflection of a vector (blue), across a plane (grey), to obtain a reflected vector, (purple). The black vector is the normal of the plane. The green and red vectors are the components of the blue vector orthogonal and parralel to the normal vector, respectively. The maroon vector is the negative of the parralel component.<div class="autopermalink" data-description="Figure 1.1"><a href="#reflection" title="Copy heading and permalink for Figure 1.1" aria-label="Copy heading and permalink for Figure 1.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-6-7">
+<div class="para">Although reflections are very useful in Geometric Algebra, they are especially useful when combined with other reflections. A pertinent theorem to this is the Cartan-Dieudonné theorem, which states that any rotation can be constructed by combining reflections. If we reflect a vector twice across two different planes with normal vectors <span class="process-math">\(\mathbf{n}_1\)</span> and <span class="process-math">\(\mathbf{n}_2\text{,}\)</span> then the transformed vector <span class="process-math">\(\vvec''\)</span> is in the form:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-6-7-4">
+\begin{equation*}
+\mathbf{v}'' = -\mathbf{n}_2(-\mathbf{n}_1\mathbf{v}\mathbf{n}_1)\mathbf{n}_2 = (\mathbf{n}_2\mathbf{n}_1)\mathbf{v}(\mathbf{n}_1\mathbf{n}_2).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-6-8">The resulting geometric product of the two normal vectors, <span class="process-math">\(\mathbf{n}_2\mathbf{n}_1\text{,}\)</span> is called a <em class="emphasis">Rotor</em>.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.1.1: Reflections"><a href="#shorttitlelowercase-3-7-6" title="Copy heading and permalink for Section 1.1.1: Reflections" aria-label="Copy heading and permalink for Section 1.1.1: Reflections">🔗</a></div></section><section class="section" id="shorttitlelowercase-3-7-7"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rotors and Rotations</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-7-7-2">Rotors are the easiest and most powerful way to represent rotations in Geometric Algebra.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-7-3">
+<div class="para">We defined our rotor <span class="process-math">\(R\)</span> as the geometric product of two normal vectors: <span class="process-math">\(R = \mathbf{n}_2\mathbf{n}_1\text{.}\)</span> Because they are both vectors, we can expand this into inner and outer products:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-7-3-3">
+\begin{equation*}
+R = \mathbf{n}_2\cdot\mathbf{n}_1 + \mathbf{n}_2\wedge\mathbf{n}_1.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-7-4">
+<div class="para">Because <span class="process-math">\(\mathbf{n}_1\)</span> and <span class="process-math">\(\mathbf{n}_2\)</span> are unit vectors, their inner product <span class="process-math">\(\mathbf{n}_2\cdot\mathbf{n}_1\)</span> is simply <span class="process-math">\(\cos(\theta)\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle between them. The outer product <span class="process-math">\(\mathbf{n}_2\wedge\mathbf{n}_1\)</span> forms a bivector representing the plane of rotation. Let us define <span class="process-math">\(B\)</span> as the unit bivector representing this plane. Then <span class="process-math">\(\mathbf{n}_2\wedge\mathbf{n}_1 = -B\sin(\theta)\text{.}\)</span> Substituting these into the equation for the rotor equation gives the equation:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-7-4-9">
+\begin{equation*}
+R = \cos(\theta) - B\sin(\theta).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-7-5">Interestingly, this is equation is a generalization of Euler’s formula, <span class="process-math">\(e^{i\theta} = \cos(\theta) + i\sin(\theta)\text{.}\)</span> Because the unit bivector <span class="process-math">\(B\)</span> squares to <span class="process-math">\(-1\)</span> (similar to the imaginary number <span class="process-math">\(i\)</span>), we can represent the rotor as the exponential: <span class="process-math">\(R = e^{-B\theta}\text{.}\)</span> Although <span class="process-math">\(B\)</span> is similar to the imaginary unit <span class="process-math">\(i\text{,}\)</span> it is far more powerful, as it can be used to represent a rotation in any plane in any dimension.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-7-6">
+<div class="para">When we apply the sandwich product <span class="process-math">\(\mathbf{v}'' = R\mathbf{v}R^{\dagger}\text{,}\)</span> the vector is reflected <em class="emphasis">twice</em>. This means the total angle of rotation is <span class="process-math">\(2\theta\text{.}\)</span> In order to rotate a vector by angle <span class="process-math">\(\alpha\text{,}\)</span> we construct a rotor with an angle of <span class="process-math">\(\alpha/2\text{.}\)</span> Thus, the rotor <span class="process-math">\(R\)</span> that rotates any multivector by an angle <span class="process-math">\(\alpha\)</span> in a plane represented by <span class="process-math">\(B\)</span> is:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-7-6-9">
+\begin{equation*}
+R = e^{-B\alpha/2}.
+\end{equation*}
+</div>
+<div class="para">The reverse rotor, <span class="process-math">\(R^{\dagger}\text{,}\)</span> has the opposite angle: <span class="process-math">\(R^{\dagger} = e^{B\alpha/2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="shorttitlelowercase-3-7-7-7">
+<div class="para">To rotate any vector <span class="process-math">\(\mathbf{v}\text{,}\)</span> we use the sandwhich product:</div>
+<div class="displaymath process-math" id="shorttitlelowercase-3-7-7-7-2">
+\begin{equation*}
+\vvec ' = e^{-B\alpha/2} \mathbf{v} e^{B\alpha/2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="shorttitlelowercase-3-7-7-8">This formula rotates any vector in not only 3 dimensional space, but a space of any dimension. Rotors are just as versatile as quaternions when it comes to rotations, but have a cleaner construction and can work in any basis.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-7-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.1.2: Rotors and Rotations"><a href="#shorttitlelowercase-3-7-7" title="Copy heading and permalink for Section 1.1.2: Rotors and Rotations" aria-label="Copy heading and permalink for Section 1.1.2: Rotors and Rotations">🔗</a></div></section><section class="section" id="shorttitlelowercase-3-7-8"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Further Explorations in Geometric Algebra</span>
+</h4>
+<div class="para" id="shorttitlelowercase-3-7-8-2">Unfortunately, we were only able to focus on Clifford Algebras over standard Euclidean space <span class="process-math">\(\clthree\)</span> and a few applications. There are far more interesting Geometric Algebras than this, and their applications go far beyond rotations. In fact, Geometric Algebra is a quickly growing field in both math and physics. Some useful topics that I would recommend exploring are:<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="shorttitlelowercase-3-7-8-3"><h5 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spacetime Algebra (STA)</span>
+</h5>
+<div class="para" id="shorttitlelowercase-3-7-8-3-2">We can add an additional basis vector that squares to <span class="process-math">\(-1\)</span> to form<span class="process-math">\(Cl_{3,1,0}\text{.}\)</span> This Geometric Algebra is a very useful representation of relativistic physics. This is known as Spacetime Algebra, which is able to combine the electric and magnetic fields into a single bivector field, denoted <span class="process-math">\(F\text{.}\)</span> Using this, Maxwell’s 4 equations can be condensed into the single equation <span class="process-math">\(\nabla F = J\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Spacetime Algebra (STA)"><a href="#shorttitlelowercase-3-7-8-3" title="Copy heading and permalink for Subsection: Spacetime Algebra (STA)" aria-label="Copy heading and permalink for Subsection: Spacetime Algebra (STA)">🔗</a></div></section><section class="subsection" id="shorttitlelowercase-3-7-8-4"><h5 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Projective Geometric Algebra (PGA)</span>
+</h5>
+<div class="para" id="shorttitlelowercase-3-7-8-4-2">From <span class="process-math">\(\clthree\text{,}\)</span> we can add a basis vector that squares to zero <span class="process-math">\(Cl_{3,0,1}\text{.}\)</span> This is 3D Projective Geometric Algebra. PGA treats translations and rotations very similarly, which is useful for computer graphics and kinematics. PGA introduces motors (motion rotors) that can perform rigid body transformations with a single geometric product.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-8-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Projective Geometric Algebra (PGA)"><a href="#shorttitlelowercase-3-7-8-4" title="Copy heading and permalink for Subsection: Projective Geometric Algebra (PGA)" aria-label="Copy heading and permalink for Subsection: Projective Geometric Algebra (PGA)">🔗</a></div></section><section class="subsection" id="shorttitlelowercase-3-7-8-5"><h5 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric Calculus</span>
+</h5>
+<div class="para" id="shorttitlelowercase-3-7-8-5-2">Geometric Calculus extends Geometric Algebra to derivatives and integrals. It introduces the vector derivative, <span class="process-math">\(\nabla\text{,}\)</span> which can work with multivectors. This combines the gradient, divergence, and curl into a single operator. Geometric Calculus also generalizes Stokes’ Theorem, that also combines Green’s theorem and the  fundamental theorem of calculus.<div class="autopermalink" data-description="Paragraph"><a href="#shorttitlelowercase-3-7-8-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Geometric Calculus"><a href="#shorttitlelowercase-3-7-8-5" title="Copy heading and permalink for Subsection: Geometric Calculus" aria-label="Copy heading and permalink for Subsection: Geometric Calculus">🔗</a></div></section><div class="autopermalink" data-description="Section 1.1.3: Further Explorations in Geometric Algebra"><a href="#shorttitlelowercase-3-7-8" title="Copy heading and permalink for Section 1.1.3: Further Explorations in Geometric Algebra" aria-label="Copy heading and permalink for Section 1.1.3: Further Explorations in Geometric Algebra">🔗</a></div></section><div class="autopermalink" data-description="Section 1.1: Building a Geometric Algebra"><a href="#shorttitlelowercase-3-7" title="Copy heading and permalink for Section 1.1: Building a Geometric Algebra" aria-label="Copy heading and permalink for Section 1.1: Building a Geometric Algebra">🔗</a></div></section><section class="section" id="shorttitlelowercase-3-8"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
+</h3>
+<section class="references" id="shorttitlelowercase-3-8-1"><h4 class="heading hide-type">
+<span class="type">References</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bibliography</span>
+</h4>
+<article class="bib" id="JadczykNotes"><div class="bibitem">[1]</div>
+<div class="bibentry">Arkadiusz Jadczyk. <span class="booktitle">Notes on Clifford Algebras</span>. 2019. Available at <a class="external" href="https://arkadiusz-jadczyk.eu/docs/clifford.pdf" target="_blank"><code class="code-inline tex2jax_ignore">arkadiusz-jadczyk.eu/docs/clifford.pdf</code></a>.</div>
+<div class="autopermalink" data-description="Bibliographic Entry 1.2.1"><a href="#JadczykNotes" title="Copy heading and permalink for Bibliographic Entry 1.2.1" aria-label="Copy heading and permalink for Bibliographic Entry 1.2.1">🔗</a></div></article><article class="bib" id="RenaudNotes"><div class="bibitem">[2]</div>
+<div class="bibentry">Pierre Renaud. <span class="booktitle">CLIFFORD ALGEBRAS LECTURE NOTES ON APPLICATIONS IN PHYSICS</span>. 2020. Available at <a class="external" href="https://hal.science/hal-03015551/document" target="_blank"><code class="code-inline tex2jax_ignore">hal.science/hal-03015551/document</code></a>.</div>
+<div class="autopermalink" data-description="Bibliographic Entry 1.2.2"><a href="#RenaudNotes" title="Copy heading and permalink for Bibliographic Entry 1.2.2" aria-label="Copy heading and permalink for Bibliographic Entry 1.2.2">🔗</a></div></article><article class="bib" id="GEOBook"><div class="bibitem">[3]</div>
+<div class="bibentry">David Hestenes and Garret Sobczyk. <span class="booktitle">Clifford Algebra to Geometric Calculus</span>. D. Reidel Publishing Company, Dordrecht, 1984.</div>
+<div class="autopermalink" data-description="Bibliographic Entry 1.2.3"><a href="#GEOBook" title="Copy heading and permalink for Bibliographic Entry 1.2.3" aria-label="Copy heading and permalink for Bibliographic Entry 1.2.3">🔗</a></div></article><article class="bib" id="SwiftIntro"><div class="bibitem">[4]</div>
+<div class="bibentry">sudgylacmoe. <span class="booktitle">A Swift Introduction to Geometric Algebra</span>. YouTube video. Available at <a class="external" href="https://www.youtube.com/watch?v=60z_hpEAtD8" target="_blank"><code class="code-inline tex2jax_ignore">youtube.com/watch?v=60z_hpEAtD8</code></a>.</div>
+<div class="autopermalink" data-description="Bibliographic Entry 1.2.4"><a href="#SwiftIntro" title="Copy heading and permalink for Bibliographic Entry 1.2.4" aria-label="Copy heading and permalink for Bibliographic Entry 1.2.4">🔗</a></div></article><article class="bib" id="DrayGELG"><div class="bibitem">[5]</div>
+<div class="bibentry">Tevian Dray. <span class="booktitle">The Geometry of the Exceptional Lie Groups</span>. Oregon State University, 2023. Available at <a class="external" href="https://books.physics.oregonstate.edu/GELG/GELG.html" target="_blank"><code class="code-inline tex2jax_ignore">books.physics.oregonstate.edu/GELG/GELG.html</code></a>.</div>
+<div class="autopermalink" data-description="Bibliographic Entry 1.2.5"><a href="#DrayGELG" title="Copy heading and permalink for Bibliographic Entry 1.2.5" aria-label="Copy heading and permalink for Bibliographic Entry 1.2.5">🔗</a></div></article><div class="autopermalink" data-description="References 1.2: Bibliography"><a href="#shorttitlelowercase-3-8-1" title="Copy heading and permalink for References 1.2: Bibliography" aria-label="Copy heading and permalink for References 1.2: Bibliography">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2"><a href="#shorttitlelowercase-3-8" title="Copy heading and permalink for Section 1.2" aria-label="Copy heading and permalink for Section 1.2">🔗</a></div></section><div class="autopermalink" data-description="Section 1: Introduction"><a href="#shorttitlelowercase-3" title="Copy heading and permalink for Section 1: Introduction" aria-label="Copy heading and permalink for Section 1: Introduction">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="shorttitlelowercase-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
