@@ -6,6 +6,7 @@
 !.gitignore
 
 # don't track unpublished builds or stage (note: Runestone uses `published`)
+web
 published
 
 # don't track assets generated from source
